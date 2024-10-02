@@ -11,7 +11,7 @@ app.use(bodyParser.json({ limit: "50 mb"}));
 app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
 app.use(cors());
 
-app.use("/", userRoutes);
+app.use("/users", userRoutes);
 
 app.listen(secrets.PORT, ()=>{
     console.log("APP is running on", secrets.PORT);
